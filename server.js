@@ -34,8 +34,8 @@ app.get("/api/:date?", function (req, res) {
     utcDate = date.toUTCString();
   }
   else if(!(new Date(input)).getTime()){
-    res.json({error: "Invalid Date"});
-    return;
+    return res.json({error: "Invalid Date"});
+    
   }
   else{
     date = new Date(input);
