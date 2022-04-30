@@ -28,6 +28,9 @@ app.get("/api/:date", function (req, res) {
     unixDate = input;
     utcDate = date.toUTCString();
   }
+  else if(!new Date(input)){
+    console.log('error')
+  }
   else{
     date = new Date(input);
     unixDate = date.getTime();
