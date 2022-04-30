@@ -24,7 +24,7 @@ app.get("/api/:date", function (req, res) {
   let input = req.params.date;
   let date, unixDate, utcDate;
   if(/\d{5,13}/.test(input)){
-    date = new Date(input);
+    date = new Date(parseInt(input,10));
     unixDate = input;
     utcDate = date.toUTCString();
   }
